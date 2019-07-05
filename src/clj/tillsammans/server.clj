@@ -13,7 +13,7 @@
             [clojure.string :as str])
   (:gen-class))
 
-(def text "Lorem ipsum dolor sit amet")
+(def text "i och att det som en på är av för med till den har de inte om ett han men var jag sig från vi så kan man när år säger hon under också efter eller nu sin där vid mot ska skulle kommer ut får finns vara hade alla andra mycket än här då sedan över bara in blir upp även vad få två vill ha många hur mer går sverige kronor detta nya procent skall hans utan sina något svenska allt första fick måste mellan blev bli dag någon några sitt stora varit dem bland kl bra tre ta genom del hela annat fram gör ingen stockholm göra enligt mig redan inom kom du helt ju samma kanske själv oss tidigare se miljoner dock denna både tid kunna fått stor olika ser flera plats kunde gå ur gäller honom aldrig barn varje lite sätt just väl tar åt mest per står fem tror rätt dessa gång därför fyra ny gick hos dessutom ger lika eftersom vilket trots tycker människor ligger vet kvar bättre gjorde ändå inför regeringen senaste samtidigt annan ännu the blivit fall talet exempel gamla deras tiden min hennes sista komma större visar senare tog nästa göteborg ge mindre gjort usa innan alltid pengar sade först stället vår före svensk tillbaka ner nog samt ofta själva inget fler säga egen johansson igen tillsammans runt nästan lopp förra året mål längre svårt bästa andersson anders handlar dagens länge stort peter frågan spelar enda liv fortfarande medan bakom haft minst berättar fast lars personer början problem alltså bort varför anser våra företag mitt dess nytt tio inga fanns egna utanför ville kr långt framför båda behöver par nej miljarder största polisen världen direkt folk borde väg innebär sex klart göran bör vidare menar <3")
 
 (defonce main-chan (async/chan))
 (defonce main-mult (async/mult main-chan))
@@ -22,15 +22,15 @@
                                          (let [id (random-uuid)]
                                            {id {:id id
                                                 :text text
-                                                :x (rand-int 500)
-                                                :y (rand-int 400)}})))
+                                                :x (rand-int 1200)
+                                                :y (rand-int 1000)}})))
                                   (into {}))}))
 
 
 (defn update-word-pos! [id x y]
-  (swap! app-state update-in [:words id] #(assoc % :x x :y x)))
+  (swap! app-state update-in [:words id] #(assoc % :x x :y y)))
 
-(+ 1 1)
+
 
 
 (comment
